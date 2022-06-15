@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.manage .describe {
+    margin-bottom: 5px;
+}
+
+.manage .manage__item {
+    margin-bottom: 10px;
+}
