@@ -13,81 +13,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-      <section class="row">
-        <div class="manage col-7" style="padding: 0 40px;">
-            <h1 class="text-center display-4">Quản Lý tình yêu</h1>
-            <div class="manage__item">
-                <p class="describe">Tên Sinh Viên: </p>
-                <input type="text" name="Tên em bé" id="ten" class="form-control">
-                <span id="error_Name" class="helper-text text-danger"></span>
-                <span id="error_Name_all_letter" class="helper-text text-danger"></span>
-            </div>
-            <div class="manage__item">
-                <p class="describe">Tên Người Yêu: </p>
-                <input type="text" name="Tên ny" id="tenNguoiYeu" class="form-control">
-                <span id="error_husbandName" class="helper-text text-danger"></span>
-                <span id="error_husbandName_all_letter" class="helper-text text-danger"></span>
-            </div>
-            <div class="manage__item">
-               <p class="describe">Loại Sinh Viên:</p>
-                <select class="form-select" id="type">
-                    <option>Xinh đẹp</option>
-                    <option>Rất xinh đẹp</option>
-                </select>
-            </div>
-            <div class="manage__item">
-                <div class="row">
-                    <div class="col-4">
-                       <p class="describe">Điểm đáng iu: </p>
-                        <input type="text" id="dangIu" name="Điểm đáng iu" class="form-control">
-                        <span id="error_dangIuScore" class="helper-text text-danger"></span>
-                        <span id="error_dangIuScore_10" class="helper-text text-danger"></span>
+      <section class="container-fluid">
+        <section class="row">
+            <div class="manage col-7" style="padding: 0 40px;">
+                <h1 class="text-center display-4">Quản Lý tình yêu</h1>
+                <div class="manage__item">
+                    <p class="describe">Tên Sinh Viên: </p>
+                    <input type="text" name="Tên em bé" id="ten" class="form-control">
+                    <span id="error_Name" class="helper-text text-danger"></span>
+                    <span id="error_Name_all_letter" class="helper-text text-danger"></span>
+                </div>
+                <div class="manage__item">
+                    <p class="describe">Tên Người Yêu: </p>
+                    <input type="text" name="Tên ny" id="tenNguoiYeu" class="form-control">
+                    <span id="error_husbandName" class="helper-text text-danger"></span>
+                    <span id="error_husbandName_all_letter" class="helper-text text-danger"></span>
+                </div>
+                <div class="manage__item">
+                   <p class="describe">Loại Sinh Viên:</p>
+                    <select class="form-select" id="type">
+                        <option>Xinh đẹp</option>
+                        <option>Rất xinh đẹp</option>
+                    </select>
+                </div>
+                <div class="manage__item">
+                    <div class="row">
+                        <div class="col-4">
+                           <p class="describe">Điểm đáng iu: </p>
+                            <input type="text" id="dangIu" name="Điểm đáng iu" class="form-control">
+                            <span id="error_dangIuScore" class="helper-text text-danger"></span>
+                            <span id="error_dangIuScore_10" class="helper-text text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                           <p class="describe">Điểm dễ thương: </p>
+                            <input type="text" id="deThuong" name="Điểm dthw" class="form-control">
+                            <span id="error_deThuongScore" class="helper-text text-danger"></span>
+                            <span id="error_deThuongScore_10" class="helper-text text-danger"></span>
+                        </div>
+                        <div class="col-4">
+                           <p class="describe">Điểm cute: </p>
+                            <input type="text"id="cute" name="Điểm cute" class="form-control">
+                            <span id="error_cuteScore" class="helper-text text-danger"></span>
+                            <span id="error_cuteScore_10" class="helper-text text-danger"></span>
+                        </div>
                     </div>
-                    <div class="col-4">
-                       <p class="describe">Điểm dễ thương: </p>
-                        <input type="text" id="deThuong" name="Điểm dthw" class="form-control">
-                        <span id="error_deThuongScore" class="helper-text text-danger"></span>
-                        <span id="error_deThuongScore_10" class="helper-text text-danger"></span>
+                </div>
+                <div class="manage__item manage__practice">
+                    <p class="describe"> Gừi lời yêu thương tới người bạn yêu: </p>
+                    <input type="text" name="Lời yêu thương" id="loveMessage" class="form-control">
+                    <span id="error_loveMessage" class="helper-text text-danger"></span>
+                </div>
+                <div class="form-group text-center">
+                    <button id="btnXacNhan" type="submit" class="btn btn-success">Yêu Khôi </button>
+                </div>
+            </div>
+            <div class="information col-5" style="padding: 0 40px;" >
+                <h1 class="text-center text-capitalize display-4">Thông tin tình yêu</h1>
+                <div class="information__content">
+                    <div class="information__name">
+                        <p>Tên Sinh Viên: <span id="tenDisplay" class="fw-bold"></span> </p>
                     </div>
-                    <div class="col-4">
-                       <p class="describe">Điểm cute: </p>
-                        <input type="text"id="cute" name="Điểm cute" class="form-control">
-                        <span id="error_cuteScore" class="helper-text text-danger"></span>
-                        <span id="error_cuteScore_10" class="helper-text text-danger"></span>
+                    <div class="information__code">
+                        <p>Tên Người Yêu: <span id="tenNguoiYeuDisplay" class="fw-bold"></span> </p>
+                    </div>
+                    <div class="information__type">
+                        <p>Loại Sinh Viên: <span id="typeDisplay" class="fw-bold"></span> </p>
+                    </div>
+                    <div class="information__averagePoint">
+                        <p>Điểm Quyến Rũ: <span id="averagePointDisplay" class="fw-bold"></span> <i class="fa-solid fa-heart" style="color: rgb(194, 13, 194)"></i> </p>
+                    </div>
+                    <div class="information__rank">
+                        <p>Lời người yêu bạn muốn nói: <span id="wantToSay" class="fw-bold"></span> </p>
+                        <img class="img-fluid" src="" alt="">
                     </div>
                 </div>
             </div>
-            <div class="manage__item manage__practice">
-                <p class="describe"> Gừi lời yêu thương tới người bạn yêu: </p>
-                <input type="text" name="Lời yêu thương" id="loveMessage" class="form-control">
-                <span id="error_loveMessage" class="helper-text text-danger"></span>
-            </div>
-            <div class="form-group text-center">
-                <button id="btnXacNhan" type="submit" class="btn btn-success">Yêu Khôi </button>
-            </div>
-        </div>
-        <div class="information col-5" style="padding: 0 40px;" >
-            <h1 class="text-center text-capitalize display-4">Thông tin tình yêu</h1>
-            <div class="information__content">
-                <div class="information__name">
-                    <p>Tên Sinh Viên: <span id="tenDisplay" class="fw-bold"></span> </p>
-                </div>
-                <div class="information__code">
-                    <p>Tên Người Yêu: <span id="tenNguoiYeuDisplay" class="fw-bold"></span> </p>
-                </div>
-                <div class="information__type">
-                    <p>Loại Sinh Viên: <span id="typeDisplay" class="fw-bold"></span> </p>
-                </div>
-                <div class="information__averagePoint">
-                    <p>Điểm Quyến Rũ: <span id="averagePointDisplay" class="fw-bold"></span> <i class="fa-solid fa-heart" style="color: rgb(194, 13, 194)"></i> </p>
-                </div>
-                <div class="information__rank">
-                    <p>Lời người yêu bạn muốn nói: <span id="wantToSay" class="fw-bold"></span> </p>
-                    <img class="img-fluid" src="" alt="">
-                </div>
-            </div>
-        </div>
+          </section>
       </section>
+      
 
 
     <!-- Bootstrap JavaScript Libraries -->
